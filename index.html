@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WiFi QR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="title text-center">Wifi QR Code generator</h1>
+    <div class="container">
+        <div class="col-1 dataentry">
+            <div class="data">
+                <input name="SSID" id="ssid" type="text" placeholder="Network Name"></div>
+            <div class="data">
+                <input name="password" id="password" type="text" placeholder="Network Password">
+            </div>
+            <div class="data">
+                <select name="encryption" id="encryption">
+                    <option value="WPA">WPA</option>
+                    <option value="WEP">WEP</option>
+                </select>
+            </div>
+            <div class="data">
+                <button id="create-qr" onclick="createQr()">CREATE QR</button>
+            </div>
+        </div>
+        <div class="col-1" id="qr-holder">
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
+
+
+<img src="" alt="">
