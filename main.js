@@ -3,12 +3,15 @@ var pass = document.getElementById('password');
 var encryption = document.getElementById("encryption");
 var qr = document.getElementById('qr-holder')
 
+
+
 function networkData(sec,id,pw){
     return 'WIFI:T:'+sec+';S:'+id+';P:'+pw+';;'
+    //      WIFI:T:WPA;S:mynetwork;P:mypasscode;;
 }
 
 function createQr(){
-    qr.innerHTML = '<img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl='+networkData(encryption.value,ssid.value,pass.value)+'&choe=UTF-8" alt="">'
+    qr.innerHTML = '<img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl='+networkData(encryption.value,ssid.value,pass.value)+'&choe=UTF-8" alt=""><br><button id="print" onclick="window.print()">PRINT</button>'
 }
 
-//WIFI:T:WPA;S:mynetwork;P:mypasscode;;
+

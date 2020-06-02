@@ -7,15 +7,20 @@
 </head>
 
 <body>
-    <h1 class="title text-center">Wifi QR Code generator</h1>
+    <h1 class="title text-center">WiFi QR generator</h1>
     <div class="container">
+       <div class="col-1" id="qr-holder">
+        </div>
         <div class="col-1 dataentry">
             <div class="data">
+               <h2 class="text-center printonly">SSID:</h2>
                 <input name="SSID" id="ssid" type="text" placeholder="Network Name"></div>
             <div class="data">
+               <h2 class="text-center printonly">PASSWORD:</h2>
                 <input name="password" id="password" type="text" placeholder="Network Password">
             </div>
             <div class="data">
+               <h2 class="text-center printonly">TYPE:</h2>
                 <select name="encryption" id="encryption">
                     <option value="WPA">WPA</option>
                     <option value="WEP">WEP</option>
@@ -25,8 +30,7 @@
                 <button id="create-qr" onclick="createQr()">CREATE QR</button>
             </div>
         </div>
-        <div class="col-1" id="qr-holder">
-        </div>
+        
     </div>
 </body>
 <script src="main.js"></script>
